@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(228 228 231);
+  padding-bottom: 4px;
+}
+
+.search {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.imageAndSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe1e5;
+  border-radius: 15px;
+  padding: 5px;
+  width: 300px;
+
+  @media only screen and (max-width: 600px) {
+    width: 200px;
+  }
+}
+
+.searchIcon {
+  padding-right: 8px;
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.clearInput {
+  width: 0.9rem;
+  height: 0.9rem;
+  cursor: pointer;
+}
+
+.svg {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.Options {
+  display: flex;
+  align-items: center;
+}
+
+.imageUser {
+  border-radius: 50%;
+}
+
+.button {
+  all: unset;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  padding-top: 5px;
+}

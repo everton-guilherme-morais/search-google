@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 1rem 0 1rem 6rem;
+  gap: 2rem;
+  flex: 1;
+
+  @media only screen and (max-width: 900px) {
+    padding: 1rem 0 1rem 1rem;
+  } 
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  gap: 7px;
+  font-family: Arial;
+  cursor: pointer;
+}
+
+.routeResult {
+  font-size: 12px;
+}
+
+.titleResult {
+  font-family: arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(66, 133, 244);
+}
+
+.textResult {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.errorMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
