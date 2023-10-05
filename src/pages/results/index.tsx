@@ -3,8 +3,8 @@ import HeaderResults from '../../components/HeaderResults';
 import ContentResults from '../../components/ContentResults';
 import { useRouter } from 'next/router';
 const { faker } = require('@faker-js/faker');
-import Footer from '../../components/FooterHome'
-import styles from '../styles.module.css'
+import Footer from '../../components/FooterHome';
+import styles from '../styles.module.css';
 
 const IndexResults = () => {
   const router = useRouter();
@@ -57,13 +57,11 @@ const IndexResults = () => {
   };
 
   useEffect(() => {
-    // hasError = false;
     if (typeof results === 'string' && results.trim() !== '') {
       try {
         setParsedResults(JSON.parse(decodeURIComponent(results)));
       } catch (error) {
         setParsedResults([]);
-        // hasError = true;
       }
     }
     setError(hasError);

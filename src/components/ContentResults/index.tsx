@@ -31,7 +31,7 @@ export default function ContentResults(props: IPropsResults) {
             setLoading(false);
           }, 1000);
         } catch (error) {
-          console.error('Erro ao analisar JSON:', error);
+          console.error('Error parsing JSON:', error);
           setLoading(false);
         }
       } else {
@@ -60,8 +60,6 @@ export default function ContentResults(props: IPropsResults) {
     setShowModal(false);
     setModalContent(null);
   };
-
-  console.log(searchResult, 'searchResult')
 
   return (
     <div className={styles.container}>

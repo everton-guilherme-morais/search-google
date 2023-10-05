@@ -16,7 +16,7 @@ export default function ModalResult({ content, closeModal }: ModalResultProps) {
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <X className={styles.closeModalBtn} onClick={closeModal} />
         <div style={{ textAlign: 'left' }}>
-          <Image src="/bird.png" width={290} height={200} alt="Imagem do Modal" className={styles.modalImage} />
+          <Image src="/bird.png" width={290} height={200} alt="Image modal" className={styles.modalImage} />
         </div>
         
         <div className={styles.modalBody}>
