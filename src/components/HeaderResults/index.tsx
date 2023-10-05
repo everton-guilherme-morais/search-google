@@ -35,7 +35,7 @@ export default function HeaderResults(props: Props) {
     <header className={styles.container}>
       <div className={styles.imageAndSearch}>
         <Link href="/" passHref={true}>
-          <Image className={styles.imageUser} src="/google-new-logo.jpg" width={90} height={40} alt="google" />
+          <Image className={styles.imageUser} src="/Google-Logo.png" width={90} height={40} alt="google" />
         </Link>
         <div className={styles.searchContainer}>
           <Search className={styles.searchIcon} />

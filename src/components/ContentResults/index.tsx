@@ -46,7 +46,7 @@ export default function ContentResults(props: IPropsResults) {
         setLoading(false);
       }, 1000);
       setCachedResults([...props.results]);
-    } else if (props.error || localStorage.getItem('search') === undefined) {
+    } else if (props.error || searchResult === '') {
       setLoading(false);
     }
   }, [props.results, props.error]);
@@ -77,7 +77,7 @@ export default function ContentResults(props: IPropsResults) {
         ))
       ) : (
         <div>
-          {searchResult && searchResult.length === 0 ? (
+          {searchResult.length === 0 ? (
             <div>Try looking for: <b>insect, fish, horse, crocodilia, bear, cetacean, cow, lion, rabbit, cat, snake, dog, bird.</b></div>
           ) : (
             <div className={styles.errorMessage}>

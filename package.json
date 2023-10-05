@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "test": "jest"
+    "test": "jest --config jest.config.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^8.1.0",

@@ -1,6 +1,11 @@
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import ContentResults from './components/ContentResults';
 
+beforeEach(() => {
+  localStorage.setItem('search', 'some-search-value');
+});
+
+
 describe('ContentResults Component', () => {
   it('should render search results for a valid animal name', async () => {
     const mockResults = [
@@ -25,6 +30,7 @@ describe('ContentResults Component', () => {
   });
 
   it('should display a message for empty search term', async () => {
+    localStorage.setItem('search', '');
     const { getByText } = render(<ContentResults results={[]} />);
     const emptySearchMessageElement = await waitFor(() =>
       getByText('Try looking for:')
