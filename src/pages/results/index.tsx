@@ -10,7 +10,7 @@ const IndexResults = () => {
   const router = useRouter();
   const { results } = router.query;
   const [parsedResults, setParsedResults] = useState([]);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState<boolean>(false);
   let isError = false;
 
   const generateFakeData = (term: string) => {

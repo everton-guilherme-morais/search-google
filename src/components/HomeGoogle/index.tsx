@@ -8,7 +8,7 @@ import router from 'next/router';
 export default function HomeGoogle() {
   const [searchResults, setSearchResults] = useState([]);
   const [search, setSearch] = useState<string>('');
-  const [error, setError] = useState(false);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof localStorage !== 'undefined') {

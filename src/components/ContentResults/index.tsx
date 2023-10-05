@@ -12,7 +12,7 @@ interface IPropsResults {
 
 export default function ContentResults(props: IPropsResults) {
   const [loading, setLoading] = useState<boolean>(true)
-  const [showModal, setShowModal] = useState(false)
+  const [showModal, setShowModal] = useState<boolean>(false)
   const [modalContent, setModalContent] = useState<Results | null>(null)
   const [cachedResults, setCachedResults] = useState<Results[]>([]);
   const [searchResult, setSearchResult] = useState<string | null>(null);
