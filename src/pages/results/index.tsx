@@ -11,31 +11,31 @@ const IndexResults = () => {
   const { results } = router.query;
   const [parsedResults, setParsedResults] = useState([]);
   const [error, setError] = useState(false);
-  let hasError = false;
+  let isError = false;
 
   const generateFakeData = (term: string) => {
     
     let errorMessage = '';
     
     if (term === undefined) {
-      hasError = true;
+      isError = true;
       localStorage.setItem('searchResults', JSON.stringify([]))
       localStorage.setItem('search', term);
     } else if (!['bear', 'bird', 'cat', 'cetacean', 'cow', 'crocodilia', 'dog', 'fish', 'horse', 'insect', 'lion', 'rabbit', 'rodent', 'snake', 'type'].includes(term)) {
-      hasError = true;
+      isError = true;
       localStorage.setItem('searchResults', JSON.stringify([]))
     } else if (typeof faker.animal[term] !== 'function') {
-      hasError = true;
+      isError = true;
       localStorage.setItem('searchResults', JSON.stringify([]))
     } else if (['bear', 'bird', 'cat', 'cetacean', 'cow', 'crocodilia', 'dog', 'fish', 'horse', 'insect', 'lion', 'rabbit', 'rodent', 'snake', 'type'].includes(term)) {
-      hasError = false;
+      isError = false;
     }
 
-    setError(hasError);
+    setError(isError);
     localStorage.setItem('error', JSON.stringify(error));
     localStorage.setItem('search', term);
 
-    if (!hasError) {
+    if (!isError) {
       const generatedResults = [];
       
       for (let i = 0; i < 10; i++) {
@@ -64,8 +64,8 @@ const IndexResults = () => {
         setParsedResults([]);
       }
     }
-    setError(hasError);
-    localStorage.setItem('error', JSON.stringify(hasError));
+    setError(isError);
+    localStorage.setItem('error', JSON.stringify(isError));
   }, [results]);
   
 

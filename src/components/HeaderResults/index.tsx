@@ -5,12 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-interface Props {
+interface HeaderResultsProps  {
   handleSearchClick?(type: string): void;
 }
 
-export default function HeaderResults(props: Props) {
-  const [cachedSearchTerm, setCachedSearchTerm] = useState('');
+export default function HeaderResults({ handleSearchClick  }: HeaderResultsProps ) {
+  const [cachedSearchTerm, setCachedSearchTerm] = useState<string>('');
   const router = useRouter();
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function HeaderResults(props: Props) {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      props.handleSearchClick(cachedSearchTerm);
+      handleSearchClick(cachedSearchTerm);
       router.reload();
     }
   };
