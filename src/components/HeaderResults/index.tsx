@@ -26,7 +26,9 @@ export default function HeaderResults({ handleSearchClick  }: HeaderResultsProps
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      handleSearchClick(cachedSearchTerm);
+      const lowercaseSearchTerm = cachedSearchTerm.toLowerCase();
+
+      handleSearchClick(lowercaseSearchTerm);
       router.reload();
     }
   };
