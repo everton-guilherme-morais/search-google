@@ -33,6 +33,10 @@ Welcome to **Search Animal Google**, a replica of the Google search homepage ded
 
 Search Animal Google is designed to work seamlessly across various devices, including desktops, tablets, and mobile phones. Enjoy a consistent and intuitive user experience on any screen size.
 
+## Demo 🌐
+
+Check out the live demo of the project: [Search Animal Google](https://search-google.vercel.app/)
+
 ## Getting Started 🛠️
 
 To get started with this project, make sure you have Node.js installed. Then, follow these steps:
